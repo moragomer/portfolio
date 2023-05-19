@@ -12,8 +12,21 @@ body {
   /* justify-content: center; */
   align-items: center;
 }
+
+.project {
+  border-radius: 40;
+  padding: 24;
+  max-width: 360;
+  min-width: 360;
+  box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.project:hover {
+  transform: scale(1.08);
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
 .title a:hover {
-  color: red !important;
+  color: blue !important;
   text-decoration: underline !important;
 }

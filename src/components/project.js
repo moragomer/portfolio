@@ -1,6 +1,6 @@
 import react from "react";
 import colors from "./styles/colors";
-
+import "/Users/Omer.m/Downloads/My Documents/projects/code-learning/learn-react/src/style.css";
 import { Flex } from "./input";
 import { H3, H2, H4, H5, P, Label } from "./styles/typography";
 import spacing from "./styles/spacing";
@@ -16,17 +16,7 @@ function ProjectCard({ projectData }) {
   return (
     <div>
       <Link to={projectData.link} style={{ textDecoration: "none" }}>
-        <Flex
-          gap={spacing.lg}
-          style={{
-            borderRadius: "16px",
-
-            padding: "24px",
-            maxWidth: "360px",
-            minWidth: "360px",
-            boxShadow: `1px 2px 9px rgba(0, 0, 0, 0.2)`,
-          }}
-        >
+        <Flex gap={spacing.lg} className="project">
           <H2>{projectData.icon}</H2>
           <Flex flexDirection={"column"} gap={spacing.s} alignItems={"start"}>
             {" "}

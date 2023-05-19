@@ -11,17 +11,18 @@ import { useSpring, animated, easings } from "@react-spring/web";
 
 export const Home = () => {
   const springs = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
+    from: { y: 50, opacity: 0 },
+    to: { y: 0, opacity: 1 },
     config: {
-      easing: easings.easeInOutBounce,
+      easing: easings.steps(24),
+      duration: 3000,
     },
   });
   const [showProjects, setShowProjects] = React.useState(false);
   React.useEffect(() => {
     setTimeout(() => {
       setShowProjects(true);
-    }, 3000);
+    }, 1500);
   }, []);
   return (
     <Flex flexDirection={"column"} gap={spacing.xxxl} padding={40}>
@@ -50,7 +51,12 @@ export const Home = () => {
             ...springs,
           }}
         >
-          <Flex gap={spacing.lg} flexWrap={"wrap"} justifyContent={"center"}>
+          <Flex
+            gap={spacing.lg}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+            padding={"0px 156px"}
+          >
             {projectData.map((item, index) => {
               return <ProjectCard projectData={item} />;
             })}

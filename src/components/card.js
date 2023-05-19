@@ -19,6 +19,7 @@ import card5 from "./img/card5.jpeg";
 import card6 from "./img/card6.jpeg";
 
 // Card color
+
 const cardColor = {
   Project: {
     borderBottom: `8px solid ${colors.sky}`,
