@@ -90,6 +90,7 @@ export const Login = (props) => {
             // onBlur={formik.handleBlur}
             value={formik.values.email}
             style={{ width: 360 }}
+            color={formik.errors.username ? "error" : "primary"}
           />
           {formik.errors.username ? (
             <div style={{ color: "red" }}>{formik.errors.username}</div>

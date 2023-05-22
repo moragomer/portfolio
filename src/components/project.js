@@ -16,7 +16,7 @@ function ProjectCard({ projectData }) {
   return (
     <div>
       <Link to={projectData.link} style={{ textDecoration: "none" }}>
-        <Flex gap={spacing.lg} className="project">
+        <Flex gap={spacing.lg} className="project" style={{ borderRadius: 16 }}>
           <H2>{projectData.icon}</H2>
           <Flex flexDirection={"column"} gap={spacing.s} alignItems={"start"}>
             {" "}

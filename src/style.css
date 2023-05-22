@@ -14,7 +14,6 @@ body {
 }
 
 .project {
-  border-radius: 40;
   padding: 24;
   max-width: 360;
   min-width: 360;
@@ -27,6 +26,10 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
 .title a:hover {
-  color: blue !important;
+  color: rgb(208, 13, 195) !important;
+  text-decoration: underline !important;
+}
+.title .logo a:hover {
+  color: rgb(208, 13, 195) !important;
   text-decoration: underline !important;
 }

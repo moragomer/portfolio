@@ -25,13 +25,24 @@ function Title() {
       }}
     >
       <Flex style={{ gap: spacing.m }} alignItems={"center"}>
-        <Link
+        <NavLink
           to={`home`}
-          style={{ color: colors.darkGrey, textDecoration: "none" }}
+          style={({ isActive, isPending }) => {
+            return {
+              fontWeight: isActive ? "bold" : "",
+              alignItems: "center",
+              alignContent: "center",
+              color: isActive ? colors.action : "black",
+              padding: isActive ? 8 : 8,
+              borderBottom: isActive ? `2 solid ${colors.white}` : colors.white,
+              backgroundColor: isActive ? colors.white : "",
+              textDecoration: isActive ? "none" : "none",
+            };
+          }}
         >
           {" "}
           <H4>🚀 My React projects</H4>
-        </Link>
+        </NavLink>
         <NavLink
           to={`home`}
           style={({ isActive, isPending }) => {
