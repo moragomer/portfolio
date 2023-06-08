@@ -63,6 +63,12 @@ export const projectData = [
     date: "May 2023",
     link: "../charts",
   },
+  {
+    icon: "✨",
+    name: "API",
+    date: "May 2023",
+    link: "../api",
+  },
 ];
 export const userData = [
   {

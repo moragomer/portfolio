@@ -13,6 +13,7 @@ import { About } from "./pages/about";
 import colors from "./components/styles/colors";
 import { Charts } from "./pages/charts";
 import { Calc } from "./pages/calc";
+import { Api } from "./pages/fetch";
 const App = (props) => {
   return (
     <Flex
@@ -70,6 +71,10 @@ const Wrapper = () => {
         {
           path: "charts",
           element: <Charts />,
+        },
+        {
+          path: "api",
+          element: <Api />,
         },
       ],
     },

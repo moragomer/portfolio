@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { Input } from "@mui/material";
+import { Input, Snackbar, Alert } from "@mui/material";
 import * as Yup from "yup";
 import spacing from "../components/styles/spacing";
 import { Button } from "../components/Buttons/buttons";
@@ -8,6 +8,7 @@ import colors from "../components/styles/colors";
 import { userData } from "../components/data";
 import { H2, P } from "../components/styles/typography";
 import { Flex } from "../components/input";
+import { useState } from "react";
 
 const checkUser = (values) => {
   return new Promise((resolve, reject) => {
@@ -20,6 +21,20 @@ const checkUser = (values) => {
 };
 
 export const Login = (props) => {
+  const [open, setOpen] = useState();
+  const [error, setError] = useState();
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+    setError(false);
+  };
+
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -38,10 +53,10 @@ export const Login = (props) => {
       formik.setSubmitting(true);
       checkUser(values)
         .then(() => {
-          alert(JSON.stringify(values, null, 2));
+          setOpen(true);
         })
         .catch(() => {
-          alert("failed");
+          setError(true);
         })
         .finally(() => {
           formik.setSubmitting(false);
@@ -132,6 +147,32 @@ export const Login = (props) => {
           Login
         </Button>
       </form>
+      <div>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          //   message="Note archived"
+        >
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            Logged-in
+          </Alert>
+        </Snackbar>
+        <Snackbar
+          open={error}
+          autoHideDuration={4000}
+          onClose={handleClose}
+          //   message="Note archived"
+        >
+          <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
+            User name and password are incorrect{" "}
+          </Alert>
+        </Snackbar>
+      </div>
     </div>
   );
 };
