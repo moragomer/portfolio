@@ -1,15 +1,11 @@
-import react from "react";
+import React from "react";
 import colors from "./styles/colors";
-import "/Users/Omer.m/Downloads/My Documents/projects/code-learning/learn-react/src/style.css";
+import "/Users/Omer.m/Downloads/My Documents/projects-code/code-learning/learn-react/src/style.css";
 import { Flex } from "./input";
 import { H3, H2, H4, H5, P, Label } from "./styles/typography";
 import spacing from "./styles/spacing";
 import { Button } from "./Buttons/buttons";
-import { ThumbDown, ThumbUp, AutoAwesome } from "@mui/icons-material";
-import Timer from "@mui/icons-material/TimerOutlined";
-import { Avatar } from "@mui/material";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import ShareIcon from "@mui/icons-material/Share";
+
 import { Link } from "react-router-dom";
 
 function ProjectCard({ projectData }) {

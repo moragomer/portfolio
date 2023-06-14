@@ -1,8 +1,12 @@
-import React from "react";
-import card1 from "./img/card1.jpeg";
-import card2 from "./img/card2.jpeg";
-import card3 from "./img/card3.jpeg";
-import card4 from "./img/card4.jpeg";
-import card5 from "./img/card5.jpeg";
-import card6 from "./img/card6.jpeg";
-export default [card1, card2, card3, card4, card5, card6];
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const card1_jpeg_1 = __importDefault(require("./img/card1.jpeg"));
+const card2_jpeg_1 = __importDefault(require("./img/card2.jpeg"));
+const card3_jpeg_1 = __importDefault(require("./img/card3.jpeg"));
+const card4_jpeg_1 = __importDefault(require("./img/card4.jpeg"));
+const card5_jpeg_1 = __importDefault(require("./img/card5.jpeg"));
+const card6_jpeg_1 = __importDefault(require("./img/card6.jpeg"));
+exports.default = [card1_jpeg_1.default, card2_jpeg_1.default, card3_jpeg_1.default, card4_jpeg_1.default, card5_jpeg_1.default, card6_jpeg_1.default];

@@ -3,14 +3,14 @@ import colors from "./colors";
 import textSize from "../sizes/textSize";
 // import '@fontsource/roboto/400.css';
 // import '@fontsource/poppins/400.css';
-type H1props = {
+export type Title = {
   textSize?: string;
   color?: string;
 };
 export const H1 = styled.h1`
   color: ${(props) => props.color || colors.darkestGrey};
   text-align: center;
-  font-size: ${(props: H1props) => props.textSize || textSize.xxl};
+  font-size: ${(props: Title) => props.textSize || textSize.xxl};
   font-weight: 600;
   margin: 0;
   }
@@ -32,7 +32,7 @@ export const H5 = styled(H1)`
 export const H6 = styled(H1)`
   font-size: ${(props) => props.textSize || textSize.xs};
 `;
-export const P = styled.p<H1props | HTMLParagraphElement>`
+export const P = styled.p<Title | HTMLParagraphElement>`
   font-size: ${(props) => props.textSize || textSize.sm};
   color: ${(props) => props.color || colors.darkGrey};
   margin: 0;

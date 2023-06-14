@@ -4,7 +4,33 @@ import { Label } from "./styles/typography";
 import buttonSize from "./sizes/buttonSize";
 import { Input } from "@mui/material";
 import spacing from "./styles/spacing";
-type FlexProps = any;
+export type FlexProps = {
+  flexDirection?: string;
+  alignItems?: string;
+  justifyContent?: string;
+  gap?: string | number;
+  height?: string;
+  maxHeight?: string;
+  overflowY?: string;
+  position?: string;
+  top?: string;
+  Bottom?: string;
+  right?: string;
+  borderRadius?: string;
+  padding?: string;
+  backgroundColor?: string;
+  marginLeft?: string;
+  marginRight?: string;
+  marginTop?: string;
+  flexWrap?: string;
+  flexPack?: string;
+  width?: string;
+  style?: any;
+  children?: any;
+// rest: ;
+};
+
+
 
 export const Flex = ({
   flexDirection,
@@ -27,6 +53,7 @@ export const Flex = ({
   flexWrap,
   flexPack,
   width,
+  
 
   ...rest
 }:FlexProps) => (
