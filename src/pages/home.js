@@ -28,12 +28,11 @@ export const Home = () => {
     <Flex flexDirection={"column"} gap={spacing.xxxl} padding={40}>
       <Flex
         flexDirection={"column"}
-        gap={spacing.m}
+        gap={spacing.xxl}
         marginTop={80}
         alignItems={"center"}
         padding={"40px"}
       >
-        <img src={reactLogo} height={"160px"} width={"200px"} />
         <H5 style={{ fontSize: 64, fontFamily: "Source Code Pro" }}>
           <TypewriterComponent
             options={{
@@ -44,6 +43,7 @@ export const Home = () => {
             }}
           />
         </H5>
+        <img src={reactLogo} height={"80px"} width={"100px"} />
       </Flex>
       {showProjects && (
         <animated.div
