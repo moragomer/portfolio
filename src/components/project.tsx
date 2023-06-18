@@ -8,7 +8,7 @@ import { Button } from "./Buttons/buttons";
 
 import { Link } from "react-router-dom";
 
-function ProjectCard({ projectData }) {
+function ProjectCard({ projectData }:any) {
   return (
     <div>
       <Link to={projectData.link} style={{ textDecoration: "none" }}>
