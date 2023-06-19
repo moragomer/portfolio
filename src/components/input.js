@@ -20,7 +20,9 @@ const buttons_1 = require("./Buttons/buttons");
 const material_1 = require("@mui/material");
 const spacing_1 = __importDefault(require("./styles/spacing"));
 const Flex = (_a) => {
-    var { flexDirection, alignItems, justifyContent, gap, height, maxHeight, overflowY, position, top, Bottom, right, borderRadius, padding, backgroundColor, marginLeft, marginRight, marginTop, flexWrap, flexPack, width, className } = _a, rest = __rest(_a, ["flexDirection", "alignItems", "justifyContent", "gap", "height", "maxHeight", "overflowY", "position", "top", "Bottom", "right", "borderRadius", "padding", "backgroundColor", "marginLeft", "marginRight", "marginTop", "flexWrap", "flexPack", "width", "className"]);
+    var { flexDirection, alignItems, justifyContent, gap, height, maxHeight, overflowY, position, top, Bottom, right, borderRadius, padding, backgroundColor, marginLeft, marginRight, marginTop, flexWrap, flexPack, width } = _a, 
+    // className,
+    rest = __rest(_a, ["flexDirection", "alignItems", "justifyContent", "gap", "height", "maxHeight", "overflowY", "position", "top", "Bottom", "right", "borderRadius", "padding", "backgroundColor", "marginLeft", "marginRight", "marginTop", "flexWrap", "flexPack", "width"]);
     return (react_1.default.createElement("div", Object.assign({}, rest, { style: Object.assign({ display: "flex", flexDirection,
             justifyContent,
             alignItems,
@@ -40,8 +42,7 @@ const Flex = (_a) => {
             marginRight,
             marginTop,
             flexWrap,
-            width,
-            className }, rest.style) })));
+            width }, rest.style) })));
 };
 exports.Flex = Flex;
 exports.default = (props) => {
