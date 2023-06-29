@@ -1,7 +1,7 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import { createRoot } from "react-dom/client";
-import "./style.css";
+import "./components/styles/style.css";
 import { ShoppingList } from "./pages/shoppingList";
 import { Cards } from "./pages/cards";
 import { Flex } from "./components/input";

@@ -4,6 +4,8 @@ import { Label } from "./styles/typography";
 import buttonSize from "./sizes/buttonSize";
 import { Input } from "@mui/material";
 import spacing from "./styles/spacing";
+
+
 export type FlexProps = {
   flexDirection?: string;
   alignItems?: string;
@@ -30,7 +32,6 @@ export type FlexProps = {
   // className?:any;
 // rest: ;
 };
-
 
 
 export const Flex = ({
@@ -89,7 +90,7 @@ export const Flex = ({
     }}
   />
 );
-export default (props:any) => {
+export const Form =  (props:any) => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const handleSubmit = (event: any) => {

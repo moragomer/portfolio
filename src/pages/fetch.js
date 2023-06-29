@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { H1 } from "../components/styles/typography";
-import "../style.css";
+import "../components/styles/style.css";
 
 export const Api = () => {
   const [isFeching, setisFeching] = useState(false);

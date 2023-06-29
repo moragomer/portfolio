@@ -1,7 +1,6 @@
 import colors from "./styles/colors";
-import imgs from "./imgs";
 
-interface CardData {
+export interface CardData {
   title: string;
   label: string;
   projectName: string;

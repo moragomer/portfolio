@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Flex = void 0;
+exports.Form = exports.Flex = void 0;
 const react_1 = __importDefault(require("react"));
 const buttons_1 = require("./Buttons/buttons");
 const material_1 = require("@mui/material");
@@ -45,7 +45,7 @@ const Flex = (_a) => {
             width }, rest.style) })));
 };
 exports.Flex = Flex;
-exports.default = (props) => {
+const Form = (props) => {
     const [name, setName] = react_1.default.useState("");
     const [email, setEmail] = react_1.default.useState("");
     const handleSubmit = (event) => {
@@ -73,3 +73,4 @@ exports.default = (props) => {
                         props.onClear([]);
                     } }, "Clear list")))));
 };
+exports.Form = Form;

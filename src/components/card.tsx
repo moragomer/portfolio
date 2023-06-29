@@ -10,7 +10,7 @@ import Timer from "@mui/icons-material/TimerOutlined";
 import { Avatar } from "@mui/material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShareIcon from "@mui/icons-material/Share";
-
+import { CardData } from "./data";
 import card1 from "./img/card1.jpeg";
 import card2 from "./img/card2.jpeg";
 import card3 from "./img/card3.jpeg";
@@ -24,7 +24,7 @@ import card6 from "./img/card6.jpeg";
 
 // Card color
 
-const cardColor = {
+const cardColor:{[key :string]:{borderBottom:string}} = {
   Project: {
     borderBottom: `8px solid ${colors.sky}`,
   },
@@ -36,7 +36,7 @@ const cardColor = {
 //  Card cover
 const imgs = [card1, card2, card3, card4, card5, card6];
 
-function Card({ cardsData }:any) {
+function Card({ cardsData }:{cardsData:CardData}) {
   return (
     <div
       style={{
@@ -79,8 +79,11 @@ function Card({ cardsData }:any) {
         <img
           src={imgs[Math.floor(Math.random() * imgs.length)]}
           width="100%"
-          borderRadius="16px"
-          display="block"
+          style={{
+            borderRadius:"16px",
+            display:"block"
+          }}
+        
         />
       </div>
       <div style={{ padding: spacing.s, flex: 2 }}>
@@ -110,7 +113,7 @@ function Card({ cardsData }:any) {
           bottom: 0,
           right: 0,
           flex: 1,
-          padding: 24,
+          
           width: "100%",
           borderTop: "1px solid #E0E0E0",
         }}
@@ -118,7 +121,7 @@ function Card({ cardsData }:any) {
         <Flex gap={spacing.s} justifyContent={"space-between"}>
           <Flex gap={spacing.s}>
             {" "}
-            <Button variant="tertiary" bottonSize="sBlg">
+            <Button variant="tertiary" buttonSize="sBlg">
               <ShareIcon />{" "}
             </Button>
             <Button variant="tertiary" buttonSize="sBlg">
@@ -127,7 +130,7 @@ function Card({ cardsData }:any) {
           </Flex>
           <Flex gap={spacing.s}>
             {" "}
-            <Button variant="tertiary" bottonSize="sBlg">
+            <Button variant="tertiary" buttonSize="sBlg">
               <ThumbDown />{" "}
             </Button>
             <Button variant="primary" buttonSize="sBlg">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Form, { Flex } from "../components/input";
+import { Flex } from "../components/input";
+import { Form } from "../components/input";
 import Item from "../components/Item";
 import colors from "../components/styles/colors";
 import { H3, H4, P, Pbold } from "../components/styles/typography.js";

@@ -1,25 +1,37 @@
 import React from "react";
 import colors from "./styles/colors";
-import "/Users/Omer.m/Downloads/My Documents/projects-code/code-learning/learn-react/src/style.css";
+import "./styles/style.css";
 import { Flex } from "./input";
 import { H3, H2, H4, H5, P, Label } from "./styles/typography";
 import spacing from "./styles/spacing";
-import { Button } from "./Buttons/buttons";
+
 
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+const ProjectStyledCard = styled(Flex)`
 
+  padding: 24px;
+  max-width: 360px;
+  min-width: 360px;
+  box-shadow: 1px 2px 9px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+
+&:hover {
+  transform: scale(1.08);
+}
+`
 function ProjectCard({ projectData }:any) {
   return (
     <div>
       <Link to={projectData.link} style={{ textDecoration: "none" }}>
-        <Flex gap={spacing.lg} className="project" style={{ borderRadius: 16 }}>
+        <ProjectStyledCard gap={spacing.lg} style={{ borderRadius: 16 }}>
           <H2>{projectData.icon}</H2>
           <Flex flexDirection={"column"} gap={spacing.s} alignItems={"start"}>
             {" "}
             <H4>{projectData.name}</H4>
             <P style={{ color: colors.grey }}>{projectData.date}</P>
           </Flex>
-        </Flex>
+        </ProjectStyledCard>
       </Link>
     </div>
   );
