@@ -3,7 +3,7 @@ import { H1, H3, H4, H5 } from "../components/styles/typography";
 import { Flex } from "../components/input";
 import spacing from "../components/styles/spacing";
 import TypewriterComponent from "typewriter-effect";
-import reactLogo from "/Users/Omer.m/Downloads/My Documents/projects-code/code-learning/learn-react/src/components/img/reactLogo.png";
+import reactLogo from "../components/img/reactLogo.png";
 import colors from "../components/styles/colors";
 import ProjectCard from "../components/project";
 import { projectData } from "../components/data";
