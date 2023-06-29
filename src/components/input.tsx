@@ -34,7 +34,7 @@ export type FlexProps = {
 };
 
 
-export const Flex = ({
+ const Flex = ({
   flexDirection,
   alignItems,
   justifyContent,
@@ -90,7 +90,7 @@ export const Flex = ({
     }}
   />
 );
-export const Form =  (props:any) => {
+ const Form =  (props:any) => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const handleSubmit = (event: any) => {
@@ -151,3 +151,6 @@ export const Form =  (props:any) => {
     </Flex>
   );
 };
+export {
+  Form, Flex
+}

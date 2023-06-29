@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Form = exports.Flex = void 0;
+exports.Flex = exports.Form = void 0;
 const react_1 = __importDefault(require("react"));
 const buttons_1 = require("./Buttons/buttons");
 const material_1 = require("@mui/material");
@@ -51,12 +51,12 @@ const Form = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
     };
-    return (react_1.default.createElement(exports.Flex, { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: spacing_1.default.m },
+    return (react_1.default.createElement(Flex, { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: spacing_1.default.m },
         react_1.default.createElement("form", { onSubmit: handleSubmit, style: { display: "flex", flexDirection: "column", gap: spacing_1.default.m } },
             react_1.default.createElement(material_1.Input, { style: { borderRadius: 4, height: 32, width: 350, padding: 16 }, value: name, spellCheck: "true", placeholder: "Write item", onChange: (event) => {
                     setName(event.target.value);
                 } }),
-            react_1.default.createElement(exports.Flex, { flexDirection: "row-reverse", justifyContent: "flexEnd", gap: 16 },
+            react_1.default.createElement(Flex, { flexDirection: "row-reverse", justifyContent: "flexEnd", gap: 16 },
                 " ",
                 react_1.default.createElement(buttons_1.Button, { variant: "primary", buttonSize: "lg", type: "submit", disabled: name === "", onClick: () => {
                         var _a;
